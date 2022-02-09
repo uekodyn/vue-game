@@ -1,4 +1,4 @@
 export default {
 	key: 'rockPaperScissors',
-	paths: [],
+	paths: ['Score.score'],
 };

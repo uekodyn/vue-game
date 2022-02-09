@@ -5,17 +5,36 @@
                 SCORE
             </span>
             <span class="score-label--number">
-            12
+            {{ score }}
             </span>
         </h3>
     </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
+import { SET_SCORE } from '@/store/modules/score/mutations';
+
 export default {
     name: 'Score',
+    computed: {
+        ...mapState('Score', {
+            score: ({ score }) => score,
+        }),
+    },
+    created() {
+        setTimeout(() => {
+            this.setScore(3);
+        }, 3000);
+    },
 
+    methods: {
+        ...mapMutations('Score', {
+            setScore: SET_SCORE,
+        }),
+    },
 };
+
 </script>
 
 <style lang="scss">

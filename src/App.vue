@@ -3,7 +3,9 @@
     @mousemove="redefinePositions" 
     @mouseleave="resetPositions">
    <Header />
-    <router-view/>
+    <div class="view">
+     <router-view/>
+    </div>
   </div>
 </template>
 
@@ -51,5 +53,14 @@ import { bgColorFrom, bgColorTo } from './styles/variables.scss';
   height: 100%;
   flex-direction: column;
   font-family: 'Barlow Semi Condensed', Helvetica, Arial, sans-serif;
+
+  .view {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: rfs(30px);
+  }
 }
+
 </style>
