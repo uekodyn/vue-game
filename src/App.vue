@@ -52,11 +52,15 @@ import { bgColorFrom, bgColorTo } from './styles/variables.scss';
   display: flex;
   height: 100%;
   flex-direction: column;
+  min-height: 100vh;
   font-family: 'Barlow Semi Condensed', Helvetica, Arial, sans-serif;
 
   .view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     width: 100%;
-    height: 100%;
     max-width: 800px;
     margin: 0 auto;
     padding: rfs(30px);
